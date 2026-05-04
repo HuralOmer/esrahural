@@ -3,6 +3,7 @@ import HeaderTopSection from "../../sections/headerTopSection.astro";
 import HeaderSection from "../../sections/headerSection.astro";
 import HeroSection from "../../sections/heroSection.astro";
 import AboutusSection from "../../sections/aboutusSection.astro";
+import esraHuralLogo from "../../assets/headerAsset/esrahurallogo.svg";
 ---
 
 <!doctype html>
@@ -10,8 +11,9 @@ import AboutusSection from "../../sections/aboutusSection.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Esra web sitesi" />
-    <title>Esra Website</title>
+    <meta name="description" content="Esra Hural web sitesi" />
+    <link rel="icon" type="image/svg+xml" href={esraHuralLogo.src} />
+    <title>Esra Hural</title>
   </head>
   <body>
     <HeaderTopSection />
