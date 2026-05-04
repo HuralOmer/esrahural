@@ -1,15 +1,25 @@
 ---
 import "../style/heroStyle.css";
+import heroLine from "../assets/heroAsset/heroSection1.png";
+import heroBalloon from "../assets/heroAsset/heroSection2.png";
+import heroStar from "../assets/heroAsset/heroSection3.png";
+import heroPencil from "../assets/heroAsset/heroSection4.png";
+import heroBee from "../assets/heroAsset/heroSection5.png";
+import heroBlob from "../assets/heroAsset/heroSection6.png";
+import heroBook from "../assets/heroAsset/heroSection7.png";
+import heroShape from "../assets/heroAsset/heroSection-Shape.png";
+import heroChild from "../assets/heroAsset/heroSection-ShapeImg.png";
+import heroWave from "../assets/heroAsset/layered-waves-haikei.svg";
 ---
 
 <section class="hero-section" aria-labelledby="hero-title">
-  <img class="hero-section__decor hero-section__decor--line" src="/assets/heroAsset/heroSection1.png" alt="" aria-hidden="true" />
-  <img class="hero-section__decor hero-section__decor--balloon" src="/assets/heroAsset/heroSection2.png" alt="" aria-hidden="true" />
-  <img class="hero-section__decor hero-section__decor--star" src="/assets/heroAsset/heroSection3.png" alt="" aria-hidden="true" />
-  <img class="hero-section__decor hero-section__decor--pencil" src="/assets/heroAsset/heroSection4.png" alt="" aria-hidden="true" />
-  <img class="hero-section__decor hero-section__decor--bee" src="/assets/heroAsset/heroSection5.png" alt="" aria-hidden="true" />
-  <img class="hero-section__decor hero-section__decor--blob" src="/assets/heroAsset/heroSection6.png" alt="" aria-hidden="true" />
-  <img class="hero-section__decor hero-section__decor--book" src="/assets/heroAsset/heroSection7.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--line" src={heroLine.src} alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--balloon" src={heroBalloon.src} alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--star" src={heroStar.src} alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--pencil" src={heroPencil.src} alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--bee" src={heroBee.src} alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--blob" src={heroBlob.src} alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--book" src={heroBook.src} alt="" aria-hidden="true" />
 
   <div class="hero-section__inner">
     <div class="hero-section__content">
@@ -44,12 +54,12 @@ import "../style/heroStyle.css";
     </div>
 
     <div class="hero-section__visual" aria-hidden="true">
-      <img class="hero-section__shape" src="/assets/heroAsset/heroSection-Shape.png" alt="" />
-      <img class="hero-section__child" src="/assets/heroAsset/heroSection-ShapeImg.png" alt="" />
+      <img class="hero-section__shape" src={heroShape.src} alt="" />
+      <img class="hero-section__child" src={heroChild.src} alt="" />
     </div>
   </div>
 
-  <img class="hero-section__wave" src="/assets/heroAsset/layered-waves-haikei.svg" alt="" aria-hidden="true" />
+  <img class="hero-section__wave" src={heroWave.src} alt="" aria-hidden="true" />
 </section>
 
 <script>
