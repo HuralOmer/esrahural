@@ -1,0 +1,483 @@
+:root {
+  --aboutus-bg: #ffffff;
+  --aboutus-ink: #36536a;
+  --aboutus-muted: #5d7487;
+  --aboutus-accent: #f89a5b;
+  --aboutus-blue: #5f6cf2;
+  --aboutus-outline: #8dc4d0;
+  --aboutus-container: 101.25rem;
+  --aboutus-x-padding: clamp(1rem, 4vw, 4rem);
+}
+
+.aboutus-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--aboutus-bg);
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2.75rem, 5vw, 4rem);
+}
+
+.aboutus-section__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--aboutus-container);
+  margin-inline: auto;
+  padding-inline: calc(var(--aboutus-x-padding) / 2);
+  display: grid;
+  gap: clamp(0.25rem, 1.5vw, 1rem);
+  align-items: center;
+}
+
+.aboutus-section__media {
+  position: relative;
+  width: min(100%, 56.25rem);
+  margin: 0 auto clamp(-2.25rem, -6vw, -0.75rem);
+}
+
+.aboutus-section__clip-frame {
+  position: relative;
+}
+
+.aboutus-section__clip {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.aboutus-section__clip-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.aboutus-section__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.aboutus-section__eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--aboutus-accent);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.aboutus-section__title {
+  max-width: 38rem;
+  margin: 0;
+  color: var(--aboutus-ink);
+  font-family: Quicksand, sans-serif;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.aboutus-section__text {
+  max-width: 43rem;
+  margin: clamp(1rem, 3vw, 1.75rem) 0 0;
+  color: var(--aboutus-muted);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  line-height: 1.8;
+}
+
+.aboutus-section__features {
+  width: min(100%, 35rem);
+  margin-top: clamp(1.75rem, 5vw, 2.75rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.aboutus-section__features span {
+  display: inline-flex;
+  min-height: 3.15rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border-radius: 999rem;
+  background: #fff;
+  color: var(--aboutus-ink);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  font-weight: 800;
+  box-shadow: 0 0.85rem 1.8rem rgb(54 83 106 / 0.08);
+}
+
+.aboutus-section__features svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: var(--aboutus-accent);
+  stroke-width: 0.14rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+
+.aboutus-section__actions {
+  width: 100%;
+  margin-top: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 1.6rem);
+}
+
+.aboutus-section__button {
+  display: inline-flex;
+  min-height: 3.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-inline: clamp(2rem, 6vw, 3rem);
+  border-radius: 1.2rem;
+  background: var(--aboutus-accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 0.9rem 1.75rem rgb(248 154 91 / 0.22);
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.aboutus-section__button:hover,
+.aboutus-section__button:focus-visible {
+  background: #ef8442;
+  transform: translateY(-0.12rem);
+  box-shadow: 0 1.1rem 2rem rgb(248 154 91 / 0.28);
+}
+
+.aboutus-section__button svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.16rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.aboutus-section__phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: var(--aboutus-ink);
+  text-decoration: none;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  font-weight: 800;
+}
+
+.aboutus-section__phone strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--aboutus-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.aboutus-section__phone-icon {
+  display: inline-grid;
+  width: 3.75rem;
+  height: 3.75rem;
+  place-items: center;
+  border: 0.0625rem solid var(--aboutus-accent);
+  border-radius: 50%;
+  color: #fff;
+  background: var(--aboutus-accent);
+  box-shadow: inset 0 0 0 0.45rem #fff;
+}
+
+.aboutus-section__phone-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.16rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.aboutus-section__decor {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.aboutus-section__decor--car {
+  position: relative;
+  z-index: 1;
+  justify-self: start;
+  width: clamp(4rem, 16vw, 6rem);
+  margin: clamp(-0.75rem, -2vw, -0.25rem) 0 clamp(-0.35rem, -1vw, 0rem) clamp(1rem, 10vw, 4rem);
+  animation: aboutusFloatX 4.4s ease-in-out infinite;
+}
+
+.aboutus-section__decor--girl {
+  right: clamp(-1rem, 2vw, 1.5rem);
+  bottom: clamp(4.5rem, 9vw, 7rem);
+  width: clamp(6.5rem, 14vw, 10rem);
+  animation: aboutusFloatY 4.6s ease-in-out infinite;
+}
+
+.aboutus-section__bottom-wave {
+  position: absolute;
+  right: 0;
+  bottom: clamp(-2.9rem, -4vw, -1.65rem);
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  min-width: 60rem;
+  height: clamp(3.5rem, 7vw, 5.75rem);
+  object-fit: cover;
+  transform: scaleY(-1);
+  transform-origin: center center;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 35.99rem) {
+  .aboutus-section__inner {
+    gap: 0;
+  }
+
+  .aboutus-section__media {
+    width: min(100%, 27rem);
+    height: clamp(20rem, 92vw, 25.5rem);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .aboutus-section__clip-frame {
+    width: 112%;
+    transform: translate(-5%, -11%);
+  }
+
+  .aboutus-section__clip,
+  .aboutus-section__clip-overlay {
+    max-width: none;
+  }
+
+  .aboutus-section__decor--car {
+    position: absolute;
+    top: clamp(17rem, 80vw, 22.5rem);
+    left: clamp(1.1rem, 7vw, 2.75rem);
+    right: auto;
+    z-index: 2;
+    width: clamp(4.25rem, 18vw, 5.75rem);
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+  .aboutus-section__content {
+    margin-top: clamp(1.75rem, 6vw, 2.75rem);
+  }
+
+  .aboutus-section__eyebrow {
+    font-size: clamp(1.55rem, 6.5vw, 1.9rem);
+    font-weight: 800;
+  }
+
+  .aboutus-section__decor--girl {
+    opacity: 0.22;
+  }
+}
+
+@media (min-width: 36rem) {
+  .aboutus-section__inner {
+    --aboutus-x-padding: clamp(2rem, 4vw, 3rem);
+  }
+
+  .aboutus-section__features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 36rem) and (max-width: 79.99rem) {
+  .aboutus-section__inner {
+    gap: 0;
+  }
+
+  .aboutus-section__media {
+    width: min(100%, 44rem);
+    height: clamp(28rem, 70vw, 39rem);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .aboutus-section__clip-frame {
+    width: 112%;
+    transform: translate(-5%, -10%);
+  }
+
+  .aboutus-section__clip,
+  .aboutus-section__clip-overlay {
+    max-width: none;
+  }
+
+  .aboutus-section__decor--car {
+    position: absolute;
+    top: clamp(23rem, 58vw, 35rem);
+    left: clamp(3rem, 13vw, 8rem);
+    right: auto;
+    z-index: 2;
+    width: clamp(5rem, 11vw, 7rem);
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+  .aboutus-section__content {
+    margin-top: clamp(-1.5rem, -3vw, -0.75rem);
+  }
+
+  .aboutus-section__eyebrow {
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+    font-weight: 800;
+  }
+}
+
+@media (min-width: 48rem) {
+  .aboutus-section__inner {
+    --aboutus-container: 61.25rem;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .aboutus-section__media {
+    height: clamp(31rem, 68vw, 38rem);
+  }
+
+  .aboutus-section__clip-frame {
+    transform: translate(-5%, -7%);
+  }
+
+  .aboutus-section__decor--car {
+    top: clamp(27.5rem, 60vw, 34rem);
+    left: clamp(3rem, 10vw, 5.5rem);
+  }
+
+  .aboutus-section__content {
+    margin-top: clamp(0.75rem, 2vw, 1.5rem);
+  }
+}
+
+@media (min-width: 36rem) and (max-width: 56.24rem) {
+  .aboutus-section__media {
+    height: auto;
+    overflow: visible;
+  }
+
+  .aboutus-section__clip-frame {
+    width: 100%;
+    transform: none;
+  }
+
+  .aboutus-section__decor--car {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    justify-self: start;
+    width: clamp(5rem, 12vw, 6.5rem);
+    margin: clamp(-6.5rem, -12vw, -4.75rem) 0 0 clamp(2rem, 12vw, 5rem);
+    transform: none;
+  }
+
+  .aboutus-section__content {
+    margin-top: clamp(0.75rem, 2vw, 1.25rem);
+  }
+}
+
+@media (min-width: 64rem) {
+  .aboutus-section__inner {
+    --aboutus-container: 73.75rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .aboutus-section__inner {
+    --aboutus-x-padding: clamp(3.5rem, 4vw, 4rem);
+    --aboutus-container: 85rem;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+    gap: clamp(0.75rem, 2vw, 1.75rem);
+  }
+
+  .aboutus-section__media {
+    width: min(100%, 58.5rem);
+    margin: 0;
+  }
+
+  .aboutus-section__decor--car {
+    position: absolute;
+    top: clamp(1.5rem, 6vw, 5rem);
+    left: clamp(1rem, 4vw, 3rem);
+    width: clamp(4rem, 10vw, 7rem);
+    margin: 0;
+  }
+
+  .aboutus-section__content {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .aboutus-section__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 80rem) and (max-width: 87.5rem) {
+  .aboutus-section__decor--car {
+    top: clamp(0.25rem, 2vw, 1.75rem);
+    left: clamp(-1.75rem, -1vw, -0.5rem);
+  }
+
+  .aboutus-section__decor--girl {
+    bottom: clamp(0.25rem, 2vw, 1.75rem);
+  }
+}
+
+@media (min-width: 90rem) {
+  .aboutus-section__inner {
+    --aboutus-container: 101.25rem;
+  }
+}
+
+@keyframes aboutusFloatX {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 1.15rem 0;
+  }
+}
+
+@keyframes aboutusFloatY {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aboutus-section__decor--car,
+  .aboutus-section__decor--girl {
+    animation: none;
+  }
+}

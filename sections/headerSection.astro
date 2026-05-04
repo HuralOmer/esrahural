@@ -1,0 +1,293 @@
+---
+import "../style/headerStyle.css";
+---
+
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="/" aria-label="Kidsa ana sayfa">
+      <span class="site-header__logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <path d="M32 6 36.7 19.4 51 16 41.4 27.2 55 34 40.2 36.2 44.6 50 32 42.2 19.4 50 23.8 36.2 9 34 22.6 27.2 13 16 27.3 19.4 32 6Z"></path>
+          <circle cx="32" cy="30" r="8"></circle>
+          <path d="M18 53c2.5-8.5 8-12.8 14-12.8S43.5 44.5 46 53"></path>
+        </svg>
+      </span>
+      <span class="site-header__logo-text">Kidsa</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Ana navigasyon">
+      <a class="site-header__nav-link" href="/">Ana Sayfa</a>
+      <a class="site-header__nav-link" href="/hakkimizda">Hakkımızda</a>
+      <a class="site-header__nav-link site-header__nav-link--dropdown" href="/programlar">
+        Programlar
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </a>
+      <a class="site-header__nav-link site-header__nav-link--dropdown" href="/sayfalar">
+        Sayfalar
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </a>
+      <a class="site-header__nav-link site-header__nav-link--dropdown" href="/blog">
+        Blog
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </a>
+      <a class="site-header__nav-link" href="/iletisim">İletişim</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="site-header__search-button" type="button" aria-label="Arama ekranını aç" data-search-open>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m16.5 16.5 4 4"></path>
+        </svg>
+      </button>
+
+      <a class="site-header__quote" href="/iletisim">İletişim</a>
+    </div>
+
+    <div class="site-header__mobile-actions">
+      <button class="site-header__mobile-search-button" type="button" aria-label="Arama ekranını aç" data-search-open>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m16.5 16.5 4 4"></path>
+        </svg>
+      </button>
+
+      <button class="site-header__menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="site-header-placeholder" data-site-header-placeholder aria-hidden="true"></div>
+
+<div class="site-header__mobile-panel" data-mobile-panel aria-hidden="true">
+    <aside class="site-header__mobile-drawer" aria-label="Mobil menü">
+      <div class="site-header__mobile-head">
+        <a class="site-header__drawer-logo" href="/" aria-label="Kidsa ana sayfa">
+          <span class="site-header__logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <path d="M32 6 36.7 19.4 51 16 41.4 27.2 55 34 40.2 36.2 44.6 50 32 42.2 19.4 50 23.8 36.2 9 34 22.6 27.2 13 16 27.3 19.4 32 6Z"></path>
+              <circle cx="32" cy="30" r="8"></circle>
+              <path d="M18 53c2.5-8.5 8-12.8 14-12.8S43.5 44.5 46 53"></path>
+            </svg>
+          </span>
+          <span class="site-header__logo-text">Kidsa</span>
+        </a>
+
+        <button class="site-header__drawer-close" type="button" aria-label="Menüyü kapat" data-menu-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="site-header__mobile-nav" aria-label="Mobil navigasyon">
+        <a class="site-header__mobile-nav-link site-header__mobile-nav-link--plus" href="/">Ana Sayfa <span aria-hidden="true">+</span></a>
+        <a class="site-header__mobile-nav-link" href="/hakkimizda">Hakkımızda</a>
+        <a class="site-header__mobile-nav-link site-header__mobile-nav-link--plus" href="/programlar">Programlar <span aria-hidden="true">+</span></a>
+        <a class="site-header__mobile-nav-link site-header__mobile-nav-link--plus" href="/sayfalar">Sayfalar <span aria-hidden="true">+</span></a>
+        <a class="site-header__mobile-nav-link site-header__mobile-nav-link--plus" href="/blog">Blog <span aria-hidden="true">+</span></a>
+        <a class="site-header__mobile-nav-link" href="/iletisim">İletişim</a>
+      </nav>
+
+      <div class="site-header__drawer-contact">
+        <h2>İletişim Bilgileri</h2>
+        <a href="https://maps.google.com/?q=Main+Street,+Melbourne,+Australia" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 10c0 5.2-8 11-8 11S4 15.2 4 10a8 8 0 1 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Main Street, Melbourne, Avustralya</span>
+        </a>
+        <a href="mailto:info@example.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 7 9 6 9-6"></path>
+          </svg>
+          <span>info@example.com</span>
+        </a>
+        <span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 7v5l3 2"></path>
+          </svg>
+          <span>Pazartesi-Cuma, 09:00 - 17:00</span>
+        </span>
+        <a href="tel:+11002345909">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2Z"></path>
+          </svg>
+          <span>+11002345909</span>
+        </a>
+      </div>
+
+      <a class="site-header__drawer-quote" href="/iletisim">
+        İletişim
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="m13 6 6 6-6 6"></path>
+        </svg>
+      </a>
+
+      <div class="site-header__drawer-social" aria-label="Sosyal medya">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 8h2.5V4.5A17 17 0 0 0 14.2 4C10.9 4 9 6 9 9.5V12H6v4h3v8h4v-8h3.2l.6-4H13V9.9C13 8.7 13.4 8 15 8Z"></path></svg></a>
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.4.7.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.7 1A4.1 4.1 0 0 0 11.6 9c0 .3 0 .6.1.9A11.7 11.7 0 0 1 3.2 5.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.7 2.1 2.9 3.9 2.9A8.3 8.3 0 0 1 2 19.2a11.7 11.7 0 0 0 6.3 1.8c7.5 0 11.7-6.2 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1Z"></path></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5a3 3 0 0 0-2.1 2.1C2 9.1 2 12 2 12s0 2.9.4 4.8a3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1c.4-1.9.4-4.8.4-4.8s0-2.9-.4-4.8ZM10 15.4V8.6l6 3.4-6 3.4Z"></path></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 8.8H3.2V21h3.7V8.8ZM5.1 7.1a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM21 14.2c0-3.5-1.9-5.7-4.8-5.7-1.9 0-3.1 1-3.7 2V8.8H8.9V21h3.7v-6.1c0-1.7.9-2.9 2.4-2.9s2.3 1.1 2.3 3V21H21v-6.8Z"></path></svg></a>
+      </div>
+    </aside>
+  </div>
+
+<div class="site-search" data-search-overlay aria-hidden="true">
+  <button class="site-search__close" type="button" aria-label="Arama ekranını kapat" data-search-close>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </svg>
+  </button>
+
+  <form class="site-search__form" action="/arama" role="search">
+    <label class="site-search__label" for="site-search-input">Arama</label>
+    <input id="site-search-input" class="site-search__input" type="search" name="q" placeholder="Ara ..." autocomplete="off" data-search-input />
+  </form>
+</div>
+
+<script>
+  const header = document.querySelector("[data-site-header]");
+  const headerPlaceholder = document.querySelector("[data-site-header-placeholder]");
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const mobilePanel = document.querySelector("[data-mobile-panel]");
+  const menuClose = document.querySelector("[data-menu-close]");
+  const searchOverlay = document.querySelector("[data-search-overlay]");
+  const searchInput = document.querySelector("[data-search-input]");
+  const searchOpenButtons = document.querySelectorAll("[data-search-open]");
+  const searchClose = document.querySelector("[data-search-close]");
+
+  let headerTop = header ? header.offsetTop : 0;
+  let headerHeight = header ? header.offsetHeight : 0;
+  let lastScrollY = window.scrollY;
+  let fadeTimer;
+
+  const measureHeader = () => {
+    if (!header || header.classList.contains("is-fixed")) return;
+
+    headerTop = header.offsetTop;
+    headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty("--site-header-height", `${headerHeight}px`);
+  };
+
+  const resetHeader = () => {
+    window.clearTimeout(fadeTimer);
+    header?.classList.remove("is-fixed", "is-scrolled", "is-dropping", "is-fading");
+    headerPlaceholder?.classList.remove("is-active");
+  };
+
+  const showFixedHeader = () => {
+    if (!header || header.classList.contains("is-fixed")) return;
+
+    document.documentElement.style.setProperty("--site-header-height", `${headerHeight}px`);
+    headerPlaceholder?.classList.add("is-active");
+    header.classList.remove("is-fading", "is-dropping");
+    header.classList.add("is-fixed", "is-scrolled");
+
+    requestAnimationFrame(() => {
+      header.classList.add("is-dropping");
+    });
+  };
+
+  const fadeFixedHeader = () => {
+    if (!header || !header.classList.contains("is-fixed") || header.classList.contains("is-fading")) return;
+
+    header.classList.remove("is-dropping");
+    header.classList.add("is-fading");
+    window.clearTimeout(fadeTimer);
+    fadeTimer = window.setTimeout(resetHeader, 220);
+  };
+
+  const closeSearch = () => {
+    searchOverlay?.classList.remove("is-open");
+    searchOverlay?.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("has-search-open");
+  };
+
+  const openSearch = () => {
+    closeMobileMenu();
+    searchOverlay?.classList.add("is-open");
+    searchOverlay?.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("has-search-open");
+    window.setTimeout(() => searchInput?.focus(), 120);
+  };
+
+  const closeMobileMenu = () => {
+    menuToggle?.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    mobilePanel?.classList.remove("is-open");
+    mobilePanel?.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("has-mobile-menu-open");
+  };
+
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = menuToggle.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    mobilePanel?.classList.toggle("is-open", isOpen);
+    mobilePanel?.setAttribute("aria-hidden", String(!isOpen));
+    document.documentElement.classList.toggle("has-mobile-menu-open", isOpen);
+  });
+
+  menuClose?.addEventListener("click", closeMobileMenu);
+
+  mobilePanel?.addEventListener("click", (event) => {
+    if (event.target === mobilePanel) closeMobileMenu();
+  });
+
+  searchOpenButtons.forEach((button) => {
+    button.addEventListener("click", openSearch);
+  });
+  searchClose?.addEventListener("click", closeSearch);
+
+  searchOverlay?.addEventListener("click", (event) => {
+    if (event.target === searchOverlay) closeSearch();
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeSearch();
+      closeMobileMenu();
+    }
+  });
+
+  window.addEventListener("resize", measureHeader);
+  window.addEventListener("load", measureHeader);
+  measureHeader();
+
+  window.addEventListener("scroll", () => {
+    if (!header) return;
+
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < lastScrollY;
+    const headerExitPoint = headerTop + headerHeight;
+    const showPoint = headerExitPoint + 10;
+    const fadePoint = headerExitPoint + 30;
+
+    if (currentScrollY <= headerExitPoint) {
+      resetHeader();
+      closeMobileMenu();
+    } else if (isScrollingUp && currentScrollY <= fadePoint) {
+      fadeFixedHeader();
+      closeMobileMenu();
+    } else if (currentScrollY > showPoint) {
+      showFixedHeader();
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+</script>

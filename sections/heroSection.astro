@@ -1,0 +1,73 @@
+---
+import "../style/heroStyle.css";
+---
+
+<section class="hero-section" aria-labelledby="hero-title">
+  <img class="hero-section__decor hero-section__decor--line" src="/assets/heroAsset/heroSection1.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--balloon" src="/assets/heroAsset/heroSection2.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--star" src="/assets/heroAsset/heroSection3.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--pencil" src="/assets/heroAsset/heroSection4.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--bee" src="/assets/heroAsset/heroSection5.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--blob" src="/assets/heroAsset/heroSection6.png" alt="" aria-hidden="true" />
+  <img class="hero-section__decor hero-section__decor--book" src="/assets/heroAsset/heroSection7.png" alt="" aria-hidden="true" />
+
+  <div class="hero-section__inner">
+    <div class="hero-section__content">
+      <p class="hero-section__eyebrow">
+        Kindergarten & Baby Care
+        <span aria-hidden="true">✦</span>
+      </p>
+
+      <h1 id="hero-title" class="hero-section__title">
+        Kids' Promising
+        <span>Tomorrow</span>
+        Ahead
+      </h1>
+
+      <p class="hero-section__text">
+        Suspendisse non blandit sapien. Nunc eleifend, enim et porta porta eros risus tincidunt diam, vel sodales.
+      </p>
+
+      <div class="hero-section__actions">
+        <a class="hero-section__apply" href="/iletisim">
+          Apply Today
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </a>
+
+        <a class="hero-section__video" href="#video" aria-label="Videoyu oynat">
+          <span class="hero-section__lottie-button" data-hero-play-lottie aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-section__visual" aria-hidden="true">
+      <img class="hero-section__shape" src="/assets/heroAsset/heroSection-Shape.png" alt="" />
+      <img class="hero-section__child" src="/assets/heroAsset/heroSection-ShapeImg.png" alt="" />
+    </div>
+  </div>
+
+  <img class="hero-section__wave" src="/assets/heroAsset/layered-waves-haikei.svg" alt="" aria-hidden="true" />
+</section>
+
+<script>
+  import lottie from "lottie-web";
+  import playButtonPulse from "../assets/heroAsset/play-button-pulse.json";
+
+  const playButton = document.querySelector("[data-hero-play-lottie]");
+
+  if (playButton) {
+    lottie.loadAnimation({
+      container: playButton,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: playButtonPulse,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid meet",
+      },
+    });
+  }
+</script>

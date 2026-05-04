@@ -1,0 +1,89 @@
+---
+import "../style/aboutusStyle.css";
+import aboutImg1 from "../assets/aboutusAsset/aboutusimg1.jpg";
+import aboutImg2 from "../assets/aboutusAsset/aboutusimg2.png";
+import aboutGirl from "../assets/aboutusAsset/aboutusSection-girl.png";
+import aboutCar from "../assets/aboutusAsset/aboutusSection-car.png";
+import aboutClipOverlay from "../assets/aboutusAsset/aboutusSection_pictureClips-outline.svg";
+import aboutBottomWave from "../assets/aboutusAsset/aboutusBottom-wave-haikei.svg";
+
+const bigClipPath =
+  "M66.72,188.08c.01-5.06-.01-13.94,2.48-24.24,1.54-6.36,4.03-13.25,8.08-20.11,2.78-4.71,5.18-7.6,5.92-8.47,15.21-17.91,38.66-21.46,48.14-21.34.58,0,5.37.09,11.68.44,4.31.24,6.03.43,11.2.76,5.01.32,8.24.45,11.49.6,12.37.57,18.43,1.13,22.76,1.33,7.57.35,18.49.02,32.67-3.12,4.3-.9,11.09-2.42,19.3-4.76,20.95-5.96,21.98-8.9,34.89-10.89,14.2-2.2,26.15-.68,31.08.1,2.73.43,4.98.91,6.57,1.27,8.81,2.46,15.2,5.78,19.29,8.25,4.55,2.74,9.39,6.33,31.06,27.83,3.46,3.43,6.28,6.26,8.15,8.14,5.76,6.35,12.35,13.03,19.85,19.8,9.41,8.48,18.58,15.59,27.05,21.52,16.93,11.84,18.47,13.61,23.99,18.71,8.92,8.24,15.14,16.13,19.02,21.53,2.91,4.29,5.75,9.1,8.34,14.47,11.73,24.3,12.43,47.83,11.29,63.07-1.01,8.8-2.01,17.6-3.02,26.4-6.64-2.41-15.99-4.97-27.38-5.61-15.33-.85-27.75,2.16-35.53,4.72-10.96,3.8-18.36,8.71-23.11,12.51-3.98,3.19-6.03,5.56-15.32,14.06-5.21,4.78-9.55,8.6-12.38,11.06-3.13,2.88-6.44,6.23-9.79,10.09-4.07,4.68-7.41,9.23-10.15,13.39-1.53,2.44-2.96,5.26-4.1,8.47-5.71,16.06-.28,31.18,2.32,37.23-9.29,1.86-19.09,3.55-29.38,4.99-14.93,2.09-29.07,3.39-42.27,4.12-14.21,1.15-28.43,2.31-42.64,3.46-14,.83-29.67.79-46.66-.84-6.48-.62-12.69-1.43-18.62-2.38-4.22-.96-10.41-2.68-17.44-5.86-16.88-7.65-27.01-18.54-38.04-30.64-8.67-9.5-17.19-19.03-25.28-33.96-10.57-19.52-15.05-38.61-16.78-54.04.06-61.89,1.22-108.74,1.27-132.09Z";
+
+const smallClipPath =
+  "M480.71,479.65c-.93,0-1.88-.02-2.87-.06-2.91-.11-5.85-.41-8.72-.87l-.11-.02c-6.76-1.39-13.65-2.36-20.5-2.89-4.23-.33-8.53-.49-12.77-.49-12.33,0-24.8,1.39-37.04,4.14l-.18.04h-.19c-.75.07-1.5.09-2.25.09-1.24,0-2.48-.07-3.71-.22-1.63-.19-3.27-.52-4.85-.97l-.15-.05c-4.98-1.76-9.72-4.13-14.09-7.04-8.69-5.79-14.04-12.76-15.8-15.05l-.24-.3c-4.32-5.56-11.99-17.14-14.9-32.24-1.07-5.57-1.36-10.8-.85-15.54.4-3.7,1.23-7.37,2.47-10.9l.03-.09.04-.09c2.59-5.87,5.92-11.35,9.91-16.31,3.88-4.83,7.61-8.19,12.76-12.84.95-.85,1.98-1.77,3.14-2.79,3.06-2.7,6.86-6.05,12.21-11.11,3.95-3.73,10.14-9.27,14.61-12.61,7.85-5.88,16.2-9.31,20.48-10.82,3.6-1.28,11.08-3.54,20.75-4.37,2.26-.19,4.95-.4,8.29-.4,6.31,0,12.55.78,18.54,2.32,3.97,1.02,10.61,2.73,18.04,7.46,5.2,3.32,8.58,6.71,10.39,8.53l.21.21c1.57,1.56,6.35,6.31,10.67,14.02,2.58,4.61,4.84,9.45,6.71,14.38,2.91,7.67,4.95,15.71,6.06,23.89l.02.13,1.54,46.71v.12c-.3,4.78-2.1,16.92-12.44,26.33-7.57,6.9-16.17,8.95-20.62,9.56h-.09s-.09.02-.09.02c-1.46.09-2.94.13-4.4.13Z";
+---
+
+<section class="aboutus-section" id="aboutus">
+  <img class="aboutus-section__decor aboutus-section__decor--girl" src={aboutGirl.src} alt="" aria-hidden="true" />
+
+  <div class="aboutus-section__inner">
+    <div class="aboutus-section__media" aria-label="Anaokulu etkinlik görselleri">
+      <div class="aboutus-section__clip-frame">
+        <svg class="aboutus-section__clip" viewBox="0 0 595.28 600" role="img" aria-label="Çocuk eğitiminden iki fotoğraf">
+          <defs>
+            <clipPath id="aboutusBigClip">
+              <path d={bigClipPath}></path>
+            </clipPath>
+            <clipPath id="aboutusSmallClip">
+              <path d={smallClipPath}></path>
+            </clipPath>
+          </defs>
+
+          <image
+            href={aboutImg1.src}
+            x="42"
+            y="68"
+            width="455"
+            height="390"
+            preserveAspectRatio="xMidYMid slice"
+            clip-path="url(#aboutusBigClip)"
+          />
+
+          <image
+            href={aboutImg2.src}
+            x="328"
+            y="314"
+            width="205"
+            height="178"
+            preserveAspectRatio="xMidYMid slice"
+            clip-path="url(#aboutusSmallClip)"
+          />
+        </svg>
+
+        <img class="aboutus-section__clip-overlay" src={aboutClipOverlay.src} alt="" aria-hidden="true" />
+      </div>
+    </div>
+
+    <img class="aboutus-section__decor aboutus-section__decor--car" src={aboutCar.src} alt="" aria-hidden="true" />
+
+    <div class="aboutus-section__content">
+      <p class="aboutus-section__eyebrow">Hakkımızda</p>
+      <h2 class="aboutus-section__title">Çocuklar İçin En İyi Seçim</h2>
+      <p class="aboutus-section__text">
+        Çocukların merakını, yaratıcılığını ve güven duygusunu destekleyen sıcak bir öğrenme ortamı sunuyoruz.
+        Her yaş grubuna özel programlarımızla gelişimi keyifli hale getiriyoruz.
+      </p>
+
+      <div class="aboutus-section__features" aria-label="Öne çıkan özellikler">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 12 3 3 7-7"></path><circle cx="12" cy="12" r="9"></circle></svg>Oyunla Öğrenme</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 12 3 3 7-7"></path><circle cx="12" cy="12" r="9"></circle></svg>Yaratıcı Atölyeler</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 12 3 3 7-7"></path><circle cx="12" cy="12" r="9"></circle></svg>Güvenli Alan</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 12 3 3 7-7"></path><circle cx="12" cy="12" r="9"></circle></svg>Uzman Eğitmenler</span>
+      </div>
+
+      <div class="aboutus-section__actions">
+        <a class="aboutus-section__button" href="/hakkimizda">
+          Daha Fazla
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <img class="aboutus-section__bottom-wave" src={aboutBottomWave.src} alt="" aria-hidden="true" />
+</section>

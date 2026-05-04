@@ -1,0 +1,259 @@
+:root {
+  --header-top-blue: #cfe2e7;
+  --header-top-cream: #f7efe4;
+  --header-top-wave: #f7efe4;
+  --header-top-ink: #1f5876;
+  --header-top-hover: #d75d4f;
+  --header-top-social-bg: #1f5876;
+  --header-top-social-label: #214d68;
+  --header-top-container: 101.25rem;
+  --header-top-x-padding: clamp(0.75rem, 3vw, 4rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--header-top-ink);
+}
+
+.header-top-section {
+  display: none;
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(5.25rem, 9vw, 5.9375rem);
+  overflow: hidden;
+  background-color: var(--header-top-blue);
+}
+
+.header-top-section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  height: clamp(3.25rem, 6vw, 3.625rem);
+  background: var(--header-top-wave);
+  mask:
+    radial-gradient(2.05625rem at 50% 2.71875rem, #000 99%, #0000 101%) calc(50% - 3.75rem) 0 / 7.5rem 100%,
+    radial-gradient(2.05625rem at 50% -0.84375rem, #0000 99%, #000 101%) 50% 1.875rem / 7.5rem 100% repeat-x;
+  -webkit-mask:
+    radial-gradient(2.05625rem at 50% 2.71875rem, #000 99%, #0000 101%) calc(50% - 3.75rem) 0 / 7.5rem 100%,
+    radial-gradient(2.05625rem at 50% -0.84375rem, #0000 99%, #000 101%) 50% 1.875rem / 7.5rem 100% repeat-x;
+}
+
+.header-top-section__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--header-top-container);
+  padding-inline: calc(var(--header-top-x-padding) / 2);
+  min-height: clamp(3rem, 5vw, 3.375rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(0.875rem, 2vw, 2rem);
+}
+
+.header-top-section__contact,
+.header-top-section__social {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.875rem, 2vw, 1.875rem);
+}
+
+.header-top-section__link {
+  color: var(--header-top-ink);
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.header-top-section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+  min-width: 0;
+  font-size: clamp(0.75rem, 1.5vw, 0.9375rem);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.header-top-section__icon {
+  width: clamp(0.9375rem, 1.7vw, 1.125rem);
+  height: clamp(0.9375rem, 1.7vw, 1.125rem);
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.125rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header-top-section__follow {
+  font-size: clamp(0.75rem, 1.5vw, 0.9375rem);
+  font-weight: 700;
+  color: #214d68;
+  white-space: nowrap;
+}
+
+.header-top-section__social {
+  gap: clamp(0.625rem, 1.4vw, 1.125rem);
+}
+
+.header-top-section__social-link {
+  position: relative;
+  display: inline-grid;
+  width: clamp(1.125rem, 1.8vw, 1.25rem);
+  height: clamp(1.125rem, 1.8vw, 1.25rem);
+  place-items: center;
+  border-radius: 0.375rem;
+  background: var(--header-top-social-bg);
+  color: #fff;
+  text-decoration: none;
+  filter: drop-shadow(0 0.25rem 0.35rem rgb(31 88 118 / 0.22));
+  transform-origin: center;
+  transition:
+    border-radius 500ms ease,
+    background-color 500ms ease,
+    color 500ms ease,
+    filter 500ms ease,
+    transform 500ms ease;
+}
+
+.header-top-section__social-link svg {
+  width: clamp(0.6875rem, 1.2vw, 0.8125rem);
+  height: clamp(0.6875rem, 1.2vw, 0.8125rem);
+  fill: currentColor;
+}
+
+.header-top-section__social-label {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 50%;
+  font-size: clamp(0.6875rem, 1.1vw, 0.8125rem);
+  font-weight: 700;
+  color: var(--header-top-social-label);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -0.35rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  white-space: nowrap;
+}
+
+.header-top-section__link:hover,
+.header-top-section__link:focus-visible {
+  color: var(--header-top-hover);
+  transform: scale(1.08);
+}
+
+.header-top-section__social-link:hover,
+.header-top-section__social-link:focus-visible {
+  border-radius: 50%;
+  background: var(--header-top-hover);
+  color: #fff;
+  filter: drop-shadow(0 0.35rem 0.45rem rgb(215 93 79 / 0.24));
+  transform: translateY(-0.125rem) scale(1.08);
+}
+
+.header-top-section__social-link:hover .header-top-section__social-label,
+.header-top-section__social-link:focus-visible .header-top-section__social-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.header-top-section__social-link:last-child .header-top-section__social-label {
+  right: 0;
+  left: auto;
+  transform: translateY(-0.35rem);
+}
+
+.header-top-section__social-link:last-child:hover .header-top-section__social-label,
+.header-top-section__social-link:last-child:focus-visible .header-top-section__social-label {
+  transform: translateY(0);
+}
+
+.header-top-section__link:focus-visible,
+.header-top-section__social-link:focus-visible {
+  outline: 0.125rem solid currentColor;
+  outline-offset: 0.25rem;
+}
+
+/* Tablet starts: 576px - 1279px */
+@media (min-width: 36rem) {
+  .header-top-section {
+    display: block;
+  }
+}
+
+@media (min-width: 36rem) and (max-width: 47.99rem) {
+  .header-top-section__inner {
+    gap: 0.5rem;
+  }
+
+  .header-top-section__contact {
+    gap: 0.75rem;
+  }
+
+  .header-top-section__link {
+    gap: 0.3rem;
+    font-size: 0.72rem;
+  }
+
+  .header-top-section__follow {
+    display: none;
+  }
+
+  .header-top-section__social {
+    gap: 0.45rem;
+  }
+
+  .header-top-section__social-link {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .header-top-section__social-link svg {
+    width: 0.65rem;
+    height: 0.65rem;
+  }
+}
+
+/* Tablet inner step */
+@media (min-width: 48rem) {
+  .header-top-section__inner {
+    --header-top-x-padding: clamp(1rem, 3vw, 2rem);
+    --header-top-container: 61.25rem;
+  }
+}
+
+/* Tablet inner step */
+@media (min-width: 64rem) {
+  .header-top-section__inner {
+    --header-top-x-padding: clamp(2rem, 4vw, 3.5rem);
+    --header-top-container: 73.75rem;
+  }
+}
+
+/* Desktop starts: 1280px+ */
+@media (min-width: 80rem) {
+  .header-top-section__inner {
+    --header-top-x-padding: clamp(3.5rem, 4vw, 4rem);
+    --header-top-container: 85rem;
+  }
+}
+
+/* Desktop large step */
+@media (min-width: 90rem) {
+  .header-top-section__inner {
+    --header-top-container: 101.25rem;
+  }
+}
