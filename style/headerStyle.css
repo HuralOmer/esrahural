@@ -93,9 +93,15 @@ body {
 .site-header__logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
   color: var(--header-ink);
   text-decoration: none;
+}
+
+.site-header__logo-image {
+  display: block;
+  width: auto;
+  height: clamp(3rem, 8vw, 4.15rem);
+  object-fit: contain;
 }
 
 .site-header__logo-mark {
@@ -278,9 +284,12 @@ body {
 .site-header__drawer-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   color: var(--header-ink);
   text-decoration: none;
+}
+
+.site-header__drawer-logo .site-header__logo-image {
+  height: clamp(3.35rem, 12vw, 4.5rem);
 }
 
 .site-header__drawer-logo .site-header__logo-mark {
@@ -629,6 +638,10 @@ body {
     justify-content: center;
     gap: clamp(1.3rem, 2.2vw, 2.5rem);
     margin-left: auto;
+  }
+
+  .site-header__logo-image {
+    height: clamp(3.4rem, 4vw, 4.4rem);
   }
 
   .site-header__nav-link {

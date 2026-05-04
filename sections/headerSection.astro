@@ -1,18 +1,12 @@
 ---
 import "../style/headerStyle.css";
+import esraHuralLogo from "../assets/headerAsset/esrahurallogo.svg";
 ---
 
 <header class="site-header" data-site-header>
   <div class="site-header__inner">
-    <a class="site-header__logo" href="/" aria-label="Kidsa ana sayfa">
-      <span class="site-header__logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 64 64">
-          <path d="M32 6 36.7 19.4 51 16 41.4 27.2 55 34 40.2 36.2 44.6 50 32 42.2 19.4 50 23.8 36.2 9 34 22.6 27.2 13 16 27.3 19.4 32 6Z"></path>
-          <circle cx="32" cy="30" r="8"></circle>
-          <path d="M18 53c2.5-8.5 8-12.8 14-12.8S43.5 44.5 46 53"></path>
-        </svg>
-      </span>
-      <span class="site-header__logo-text">Kidsa</span>
+    <a class="site-header__logo" href="/" aria-label="Esra Hural ana sayfa">
+      <img class="site-header__logo-image" src={esraHuralLogo.src} alt="Esra Hural" />
     </a>
 
     <nav class="site-header__nav" aria-label="Ana navigasyon">
@@ -71,15 +65,8 @@ import "../style/headerStyle.css";
 <div class="site-header__mobile-panel" data-mobile-panel aria-hidden="true">
     <aside class="site-header__mobile-drawer" aria-label="Mobil menü">
       <div class="site-header__mobile-head">
-        <a class="site-header__drawer-logo" href="/" aria-label="Kidsa ana sayfa">
-          <span class="site-header__logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 64 64">
-              <path d="M32 6 36.7 19.4 51 16 41.4 27.2 55 34 40.2 36.2 44.6 50 32 42.2 19.4 50 23.8 36.2 9 34 22.6 27.2 13 16 27.3 19.4 32 6Z"></path>
-              <circle cx="32" cy="30" r="8"></circle>
-              <path d="M18 53c2.5-8.5 8-12.8 14-12.8S43.5 44.5 46 53"></path>
-            </svg>
-          </span>
-          <span class="site-header__logo-text">Kidsa</span>
+        <a class="site-header__drawer-logo" href="/" aria-label="Esra Hural ana sayfa">
+          <img class="site-header__logo-image" src={esraHuralLogo.src} alt="Esra Hural" />
         </a>
 
         <button class="site-header__drawer-close" type="button" aria-label="Menüyü kapat" data-menu-close>
