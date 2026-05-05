@@ -124,7 +124,7 @@
   display: grid;
   justify-items: center;
   gap: clamp(0.5rem, 2vw, 0.75rem);
-  bottom: 15.5%;
+  top: calc(53% + 1.25rem);
   color: var(--why-you-card-text);
   text-align: center;
 }
@@ -201,13 +201,6 @@
   right: clamp(-1.5rem, 2vw, 2rem);
   bottom: clamp(2.5rem, 7vw, 5.5rem);
   width: clamp(5.5rem, 17vw, 9.25rem);
-}
-
-@media (max-width: 35.99rem) {
-  .why-you-section__card-content {
-    top: calc(53% + 1.25rem);
-    bottom: auto;
-  }
 }
 
 @media (min-width: 36rem) {
