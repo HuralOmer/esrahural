@@ -205,7 +205,7 @@
 
 @media (max-width: 35.99rem) {
   .why-you-section__card-content {
-    top: calc(50% + 0.625rem);
+    top: calc(53% + 0.625rem);
     bottom: auto;
   }
 }
