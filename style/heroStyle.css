@@ -265,15 +265,15 @@
 
 .hero-section__wave {
   position: absolute;
-  right: 0;
   bottom: -0.0625rem;
-  left: 0;
+  left: 50%;
   z-index: 3;
-  width: 100%;
+  width: 120rem;
+  max-width: none;
   height: clamp(5.5rem, 13vw, 9rem);
   object-fit: cover;
   object-position: bottom center;
-  transform: scaleY(-1);
+  transform: translateX(-50%) scaleY(-1);
   transform-origin: center center;
   pointer-events: none;
 }
