@@ -69,10 +69,32 @@
   position: relative;
   width: min(100%, 20.95rem);
   aspect-ratio: 335.09 / 414.62;
+  --why-you-card-bg: #67c0b4;
+  --why-you-card-stroke: #193052;
+  --why-you-card-text: #ffffff;
+  --why-you-card-button-bg: var(--why-you-accent);
+  --why-you-card-button-color: #ffffff;
+  --why-you-card-button-hover: var(--why-you-ink);
   filter: drop-shadow(0 1.1rem 1.65rem rgb(54 83 106 / 0.08));
 }
 
-.why-you-section__card-frame {
+.why-you-section__card--orange {
+  --why-you-card-bg: #f89a5b;
+  --why-you-card-stroke: #f89a5b;
+  --why-you-card-text: #ffffff;
+  --why-you-card-button-bg: var(--why-you-ink);
+  --why-you-card-button-hover: #ef8442;
+}
+
+.why-you-section__card--white {
+  --why-you-card-bg: #ffffff;
+  --why-you-card-stroke: #ffffff;
+  --why-you-card-text: var(--why-you-ink);
+  --why-you-card-button-bg: var(--why-you-accent);
+  --why-you-card-button-hover: var(--why-you-ink);
+}
+
+.why-you-section__card-art {
   position: absolute;
   inset: 0;
   display: block;
@@ -82,16 +104,16 @@
   user-select: none;
 }
 
-.why-you-section__card-image {
-  position: absolute;
-  top: 5.5%;
-  left: 10%;
-  z-index: 1;
-  width: 80%;
-  height: 46%;
-  object-fit: cover;
-  border-radius: 40% 45% 44% 38% / 30% 34% 36% 38%;
-  clip-path: ellipse(49% 42% at 50% 50%);
+.why-you-section__card-body {
+  fill: var(--why-you-card-bg);
+  stroke: var(--why-you-card-stroke);
+  stroke-miterlimit: 10;
+  stroke-width: 0.5px;
+}
+
+.why-you-section__card-photo {
+  pointer-events: none;
+  user-select: none;
 }
 
 .why-you-section__card-content {
@@ -103,7 +125,7 @@
   justify-items: center;
   gap: clamp(0.5rem, 2vw, 0.75rem);
   bottom: 15.5%;
-  color: #fff;
+  color: var(--why-you-card-text);
   text-align: center;
 }
 
@@ -134,8 +156,8 @@
   aspect-ratio: 1;
   place-items: center;
   border-radius: 1.35rem;
-  background: var(--why-you-accent);
-  color: #fff;
+  background: var(--why-you-card-button-bg);
+  color: var(--why-you-card-button-color);
   box-shadow: 0 0.8rem 1.5rem rgb(248 154 91 / 0.25);
   transform: translateX(-50%);
   transition:
@@ -146,7 +168,7 @@
 
 .why-you-section__card-button:hover,
 .why-you-section__card-button:focus-visible {
-  background: var(--why-you-ink);
+  background: var(--why-you-card-button-hover);
   transform: translateX(-50%) translateY(-0.12rem);
   box-shadow: 0 1rem 1.8rem rgb(54 83 106 / 0.22);
 }
