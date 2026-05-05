@@ -203,6 +203,13 @@
   width: clamp(5.5rem, 17vw, 9.25rem);
 }
 
+@media (max-width: 35.99rem) {
+  .why-you-section__card-content {
+    top: calc(54.9% + 0.625rem);
+    bottom: auto;
+  }
+}
+
 @media (min-width: 36rem) {
   .why-you-section__inner {
     --why-you-x-padding: clamp(2rem, 4vw, 3rem);
