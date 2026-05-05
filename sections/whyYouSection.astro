@@ -1,0 +1,72 @@
+---
+import "../style/whyYouStyle.css";
+import cardFrame from "../assets/whyYouAsset/hizmetlerimizframe.svg";
+import cardImage from "../assets/whyYouAsset/whyYouCardImage.jpg";
+import figureLeft from "../assets/whyYouAsset/whyYouFigureLeft.png";
+import figureRight from "../assets/whyYouAsset/whyYouFigureRight.png";
+
+const cards = [
+  {
+    title: "Kendini yalnız hissedenler",
+    text: "Bu yükü tek başına taşımaya çalışan herkes için.",
+  },
+  {
+    title: "Zorlanan ebeveynler",
+    text: "Çocuğuyla daha sakin ve güvenli bağ kurmak isteyenler için.",
+  },
+  {
+    title: "Cevap arayanlar",
+    text: "Nereden başlayacağını bilemeyen ama değişim isteyenler için.",
+  },
+  {
+    title: "Kaygısı artanlar",
+    text: "Günlük hayatın içinde nefes alacak alan arayanlar için.",
+  },
+  {
+    title: "Destek isteyenler",
+    text: "Anlaşılmak, duyulmak ve yanında biri olsun isteyenler için.",
+  },
+  {
+    title: "Yeni bir yol arayanlar",
+    text: "Daha iyi hissetmek için küçük ama gerçek adımlar atanlar için.",
+  },
+];
+---
+
+<section class="why-you-section" id="why-you" aria-labelledby="why-you-title">
+  <img class="why-you-section__figure why-you-section__figure--left" src={figureLeft.src} alt="" aria-hidden="true" />
+  <img class="why-you-section__figure why-you-section__figure--right" src={figureRight.src} alt="" aria-hidden="true" />
+
+  <div class="why-you-section__inner">
+    <div class="why-you-section__heading">
+      <p class="why-you-section__eyebrow">Kimler için?</p>
+      <h2 id="why-you-title" class="why-you-section__title">Yalnız değilsiniz</h2>
+      <p class="why-you-section__text">
+        "Neden bu kadar zor?" diye soruyorsanız, muhtemelen doğru yerdesiniz.
+      </p>
+    </div>
+
+    <div class="why-you-section__grid" aria-label="Kimler için kartları">
+      {
+        cards.map((card) => (
+          <article class="why-you-section__card">
+            <img class="why-you-section__card-frame" src={cardFrame.src} alt="" aria-hidden="true" />
+            <img class="why-you-section__card-image" src={cardImage.src} alt="" />
+
+            <div class="why-you-section__card-content">
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </div>
+
+            <a class="why-you-section__card-button" href="/iletisim" aria-label={`${card.title} hakkında bilgi al`}>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
