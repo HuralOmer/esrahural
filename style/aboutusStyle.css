@@ -233,15 +233,13 @@
 
 .aboutus-section__bottom-wave {
   position: absolute;
-  right: 0;
-  bottom: clamp(-2.9rem, -4vw, -1.65rem);
-  left: 0;
+  bottom: -0.0625rem;
+  left: 50%;
   z-index: 0;
-  width: 100%;
-  min-width: 60rem;
-  height: clamp(3.5rem, 7vw, 5.75rem);
-  object-fit: cover;
-  transform: scaleY(-1);
+  width: 120rem;
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%) scaleY(-1);
   transform-origin: center center;
   pointer-events: none;
   user-select: none;
